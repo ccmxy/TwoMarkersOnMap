@@ -1,0 +1,15 @@
+<div class="sidebar">
+  <p class=><a href="/">colleenslist</a> > <a href="/">Portland</a> > Categories </p>
+
+<ul class="list-group">
+  {{#each model as |category|}}
+  {{#link-to 'category' category.id }}
+      {{categories-component category=category destroyCategory="destroyCategory"}}
+    {{/link-to}}
+  {{/each}}
+</ul>
+</div>
+
+Click on a category to see its listings!
+
+{{new-category save="save"}}

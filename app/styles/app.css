@@ -1,0 +1,66 @@
+
+/* navbar */
+.navbar-fixed-top {
+    background-color: #EAEAEA;
+    border-color: #4A094D;
+    margin-bottom: 20px;
+}
+
+body {
+  margin-left: 50px;
+  padding-top: 100px;
+  background-color: #EAEAEA
+}
+
+.listing{
+  text-align: center;
+}
+.map-display {
+    height: 800px;
+    width: 800px;
+  }
+
+.listing-image{
+  max-width: 600px;
+  height: auto;
+}
+
+.thumnail-image{
+  max-width: 100px;
+  height: auto;
+}
+
+
+.pic{
+  /*color: #FFA500;*/
+  color: orange;
+  /*font-size: smaller;*/
+}
+
+.map{
+  color: #080
+}
+
+.muted{
+  opacity: 0.5;
+}
+
+.header-logo {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    float: left;
+    line-height: 1;
+    margin: .2125em .4em;
+    padding: 0.25em;
+    text-decoration: none;
+}
+/*.sidebar{
+	width: 20%;
+	float: left;
+	background-color: #EAEAEA;
+	padding: 10px;
+	margin-bottom: -10px;
+	padding-bottom: 49px;
+  padding-top: 20px;
+}*/

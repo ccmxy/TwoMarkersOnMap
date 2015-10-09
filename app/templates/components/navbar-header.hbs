@@ -1,0 +1,91 @@
+<nav class="navbar navbar-fixed-top" role="navigation">
+  <a class="header-logo" href="/">CL</a>
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+             <!-- <a class="navbar-brand" href="/">
+                <img src="http://www.chpc.biz/uploads/9/7/9/5/9795010/311551_orig.jpg" alt="">
+            </a> -->
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+              <!-- <li>
+                  <a href="/"><img src="http://www.chpc.biz/uploads/9/7/9/5/9795010/311551_orig.jpg" alt=""></a>
+              </li> -->
+              <li>
+                <span class="arrow"> > </span>
+                <select id="areaAbb" class="js-only">
+                  <option value="portland">portland</option>
+                  <option value="bellingham">bellingham</option>
+                  <option value="bend">bend</option>
+                  <option value="corvallis">corvallis</option>
+                  <option value="eugene">eugene</option>
+                  <option value="klamath">klamath falls</option>
+                  <option value="medford">medford</option>
+                  <option value="moseslake">moses lake</option>
+                  <option value="olympic">olympic pen</option>
+                  <option value="oregoncoast">oregon coast</option>
+                  <option value="roseburg">roseburg</option>
+                  <option value="salem">salem</option>
+                  <option value="seattle">seattle</option>
+                  <option value="skagit">skagit</option>
+                  <option value="kpr">tri-cities, WA</option>
+                  <option value="victoria">victoria, BC</option>
+                  <option value="wenatchee">wenatchee</option>
+                  <option value="yakima">yakima</option>
+                </select>
+              </li>
+              <li>
+                <span class="arrow">   >  </span>
+                <select id="subArea">
+                  <option value="" selected="">all portland</option>
+                  <option value="clc">clackamas co</option>
+                  <option value="clk">clark/cowlitz</option>
+                  <option value="grg">columbia gorge</option>
+                  <option value="mlt">multnomah co</option>
+                  <option value="nco">north coast</option>
+                  <option value="wsc">washington co</option>
+                  <option value="yam">yamhill co</option>
+              </select>
+            </li>
+            <li>
+            <span class="arrow">   >  </span>
+
+            <select>
+              <option value="yams">hur</option>
+              {{#each model as |category|}}
+                <option value="yams2">hur2</option>
+              {{/each}}
+          </select>
+
+
+            </li>
+
+
+
+              <!-- <li>
+                <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropup
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              </li> -->
+            </ul>
+        </div>
+      </div>
+    </nav>

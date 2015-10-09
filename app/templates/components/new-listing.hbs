@@ -1,0 +1,33 @@
+{{#if addNewListing}}
+<h1>New Listing</h1>
+   <div>
+     <form>
+       <div class="form-group">
+         <label for="title">Title</label>
+         {{input value=title id="title"}}
+       </div>
+       <div class="form-group">
+         <label for="details">Details (optional)</label>
+         {{input value=details id="details"}}
+       </div>
+       <div class="form-group">
+         <label for="image">Image url (optional)</label>
+         {{input value=image id="image"}}
+       </div>
+       <div class="form-group">
+        <label for="latitude">Latitude (optional)</label>
+        {{input value=latitude id="latitude"}}
+      </div>
+
+      <div class="form-group">
+        <label for="longitude">Longitude (optional)</label>
+        {{input value=longitude id="longitude"}}
+      </div>
+
+
+       <button {{action 'save'}}>Save</button>
+     </form>
+   </div>
+ {{else}}
+    <button {{action 'listingFormShow'}}>New Listing</button>
+{{/if}}

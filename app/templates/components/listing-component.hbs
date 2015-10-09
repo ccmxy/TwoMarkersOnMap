@@ -1,0 +1,26 @@
+
+<li class="list-group-item" {{action 'detailsShow'}}>
+  <span class="muted">{{format-date listing.date_added}}</span>
+  {{#link-to 'listing' listing.id}}
+    {{listing.title}}
+  {{/link-to}}
+  -
+  {{#if areDetailsShowing }}
+    {{listing.details}}
+      {{#if listing.hasImage}}
+        <p><img src={{listing.image}} {{action 'detailsHide'}}></p>
+      {{/if}}
+  {{else}}
+       <button {{action 'detailsShow'}}>Preview</button>
+  {{/if}}
+  {{#if listing.hasImage}}
+    <span class="pic"> pic </span>
+  {{/if}}
+  {{#if listing.hasImage}}
+    <span class="map"> map </span>
+  {{/if}}
+  <span{{action 'delete' listing}}>[x]</span>
+
+
+
+</li>
