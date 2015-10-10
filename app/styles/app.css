@@ -30,6 +30,10 @@ body {
   height: auto;
 }
 
+.map-display{
+  display: none;
+}
+
 
 .pic{
   /*color: #FFA500;*/
