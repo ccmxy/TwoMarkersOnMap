@@ -19,6 +19,17 @@ export default Ember.Component.extend({
       this.set('showGallery', true),
       this.set('showList', false),
       this.set('showThumbnail', false);
+    },
+    detailsShow: function(){
+      this.set('areDetailsShowing', true);
+    },
+    detailsHide: function() {
+      this.set('areDetailsShowing', false);
+    },
+  delete(listing) {
+      if (confirm('Are you sure you want to delete this listing?')) {
+        this.sendAction('destroyListing', listing);
+      }
     }
   }
 });

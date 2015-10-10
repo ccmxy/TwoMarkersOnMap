@@ -28,8 +28,6 @@ export default Ember.Component.extend({
         title: model.get('title')
       });
       marker2.setMap(theMap);
-
-
     }
   }
 });
