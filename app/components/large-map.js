@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   map: Ember.inject.service('google-map'),
 
     actions: {
-      showMap(sites) {
+      showMap(listings) {
         debugger;
         var bounds = new google.maps.LatLngBounds();
         var container = this.$('.map-display')[0];//map container to hold the map
@@ -18,19 +18,21 @@ export default Ember.Component.extend({
         //map object takes container and options/properties of map
         var displayMap = this.get('map').findMap(container, options);
 
-        //sitesArray holds the name and latitude, longitude of each site
-        var sitesArray = [];
-         sites.forEach(function(site) {
-           sitesArray.push( [site.get('title'), site.get('latitude'), site.get('longitude')]);
+        //listingsArray holds the name and latitude, longitude of each listing
+        var listingsArray = [];
+         listings.forEach(function(listing) {
+           if(listing.get('hasMap') == true){
+             listingsArray.push( [listing.get('title'), listing.get('latitude'), listing.get('longitude')]);
+           }
          });
          var marker, i;
-         //loop through each element of sitesArray to create marker for each site on displayMap
-         for (var i = 0; i < sitesArray.length; i++) {
+         //loop through each element of listingsArray to create marker for each listing on displayMap
+         for (var i = 0; i < listingsArray.length; i++) {
            //marker constructor
            var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(sitesArray[i][1], sitesArray[i][2]),
+            position: new google.maps.LatLng(listingsArray[i][1], listingsArray[i][2]),
             map:displayMap,
-            title:sitesArray[i][0]
+            title:listingsArray[i][0]
             });
           bounds.extend(marker.position);//extends the bounds to contain the given point
           displayMap.fitBounds(bounds);//sets the view port to contain the given bounds
@@ -41,16 +43,16 @@ export default Ember.Component.extend({
 
       //single marker
       //   actions: {
-      //     showMap(site) {
+      //     showMap(listing) {
       //       var container = this.$('.map-display')[0];
       //       var options = {
-      //         center: this.get('map').center(site.get('latitude'), site.get('longitude')),
+      //         center: this.get('map').center(listing.get('latitude'), listing.get('longitude')),
       //         zoom: 15
       //       };
-      //       var myLatlng = new google.maps.LatLng(site.get('latitude'),site.get('longitude'));
+      //       var myLatlng = new google.maps.LatLng(listing.get('latitude'),listing.get('longitude'));
       //       var marker = new google.maps.Marker({
       //     position: myLatlng,
-      //     title: site.get('name')
+      //     title: listing.get('name')
       // });
       //       var displayMap = this.get('map').findMap(container, options);
       //       marker.setMap(displayMap);
