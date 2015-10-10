@@ -2,6 +2,7 @@
   <button type="button" class="btn btn-default"{{action 'listFormShow' category}}>List</button>
   <button type="button" class="btn btn-default" {{action 'thumbnailFormShow' category}}>Thumbnails</button>
   <button type="button" class="btn btn-default"{{action 'galleryFormShow' category}}>Gallery</button>
+  <button type="button" class="btn btn-default"{{action 'mapsFormShow' category}}>Map</button>
 </div>
 
 {{#if showList}}
@@ -62,4 +63,8 @@
     {{/if}}
   {{/each}}
 </ul>
+{{/if}}
+
+{{#if showMap}}
+{{large-map sites=category.listings}}
 {{/if}}
